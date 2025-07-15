@@ -24,7 +24,7 @@ const Navbar = () => {
             <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-all">
               <img className="w-8" src="/logo.png" alt="Logo" />
               <h1 className="text-lg font-bold flex items-center">
-                <span className="text-black">Code</span>
+                <span className="text-black">Cod</span>
                 <span className="text-orange-500">folio</span>
               </h1>
             </Link>
