@@ -65,7 +65,8 @@ const App = () => {
           <Route path="/addfreind" element={authUser ? <AddFreind /> : <Navigate to="/login" />} />
           <Route path="/portfolio" element={authUser ? <Portfolio /> : <Navigate to="/login" />} />
           <Route path="/events" element={<Events /> } />
-          <Route path="/Card" element={<Card /> } />
+          <Route path="/Card" element={authUser ?<Card />: <Navigate to="/login" /> } />
+
           <Route path="/dsa-visualizer" element={<Dsavisualizer /> } />
           <Route path="/QuestionTracker" element={<QuestionTracker /> } />
         </Routes>
