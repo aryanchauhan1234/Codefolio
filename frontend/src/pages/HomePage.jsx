@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import ImageWithSkeleton from "../components/ImageWithSkeleton";
 import Lottie from "lottie-react";
-import codingAnimation from "../animations/Coding home page.json";
+import codingAnimation from "../styles/coding home page.json";
 
 const HomePage = () => {
   const navigate = useNavigate();
