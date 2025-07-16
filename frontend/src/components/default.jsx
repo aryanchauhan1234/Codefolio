@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { BrainCircuit } from "lucide-react";
 import Lottie from "lottie-react";
-import visualAnimation from "../animations/visual.json"; // 👈 Make sure path is correct
+import visualAnimation from "../styles/visual.json"; // 👈 Make sure path is correct
 
 const VisualizerPage = () => {
   const [active, setActive] = useState(null);
