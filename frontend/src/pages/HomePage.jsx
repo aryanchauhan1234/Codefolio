@@ -54,7 +54,7 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden p-6 sm:p-12 bg-white/70 backdrop-blur-md border border-white/30 dark:bg-gray-900/70 dark:border-white/10 rounded-2xl shadow-xl transition">
+    <div className="relative overflow-hidden p-6 sm:p-12 bg-white/70 backdrop-blur-md border border-white/30 rounded-2xl shadow-xl transition">
       {/* Hero Section */}
       <motion.div
         className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
@@ -75,7 +75,7 @@ const HomePage = () => {
           <div className="flex gap-4 flex-wrap">
             <button
               onClick={() => navigate("/QuestionTracker")}
-              className="border border-black dark:border-white font-semibold py-2.5 px-6 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition shadow"
+              className="border border-black font-semibold py-2.5 px-6 rounded-xl hover:bg-gray-100 transition shadow"
             >
               Question Tracker
             </button>
@@ -106,15 +106,15 @@ const HomePage = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <ImageWithSkeleton className="w-[40%] rounded-xl  object-contain  " src="/photo1.png" alt="photo1" />
-        <div className="text-center lg:w-[50%] ">
+        <ImageWithSkeleton className="w-[40%] rounded-xl object-contain" src="/photo1.png" alt="photo1" />
+        <div className="text-center lg:w-[50%]">
           <h1 className="font-extrabold text-3xl">
             <span className="text-5xl">T</span>rack Your{" "}
             <span className="text-orange-500"><span className="text-4xl">C</span>odeforces</span> Journey with Us
           </h1>
         </div>
-        <div className=" border-2 border-orange-500 rounded-3xl p-1 shadow hover:scale-105 transition-transform">
-          <ImageWithSkeleton className="rounded-3xl object-contain " src="/1.png" alt="cf-demo" />
+        <div className="border-2 border-orange-500 rounded-3xl p-1 shadow hover:scale-105 transition-transform">
+          <ImageWithSkeleton className="rounded-3xl object-contain" src="/1.png" alt="cf-demo" />
         </div>
       </motion.div>
 
@@ -148,7 +148,7 @@ const HomePage = () => {
       </motion.div>
       <motion.div whileHover={{ scale: 1.02 }}>
         <ImageWithSkeleton
-          className="w-full cursor-pointer my-10 rounded-3xl  p-1 shadow-md hover:scale-[1.01] transition-transform object-cover border-2 border-orange-500"
+          className="w-full cursor-pointer my-10 rounded-3xl p-1 shadow-md hover:scale-[1.01] transition-transform object-cover border-2 border-orange-500"
           src="/photo4.png"
           alt="event tracking"
         />
@@ -156,7 +156,7 @@ const HomePage = () => {
 
       {/* Portfolio Section */}
       <motion.div className="mt-20 text-left w-full" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-        <h1 className=" font-extrabold text-4xl sm:text-5xl">
+        <h1 className="font-extrabold text-4xl sm:text-5xl">
           Your <span className="text-orange-500">All-in-One</span> Coding Portfolio
         </h1>
         <h2 onClick={() => navigate("/portfolio")} className="text-blue-500 mt-3 font-medium cursor-pointer hover:underline">
@@ -171,7 +171,7 @@ const HomePage = () => {
 
       {/* Card Section */}
       <motion.div className="mt-20 text-center" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-        <h1 className=" font-extrabold text-4xl sm:text-5xl">
+        <h1 className="font-extrabold text-4xl sm:text-5xl">
           <span className="text-orange-500">UNLOCK</span> your Codefolio CARD
         </h1>
         <h2 onClick={() => navigate("/card")} className="text-blue-500 font-medium mt-4 cursor-pointer hover:underline">
@@ -199,7 +199,7 @@ const HomePage = () => {
               key={i}
               onClick={() => navigate("/dsa-visualizer")}
               whileHover={{ scale: 1.05 }}
-              className="relative min-w-[320px] max-w-sm rounded-xl shadow-md overflow-hidden cursor-pointer transition-transform duration-300  bg-white"
+              className="relative min-w-[320px] max-w-sm rounded-xl shadow-md overflow-hidden cursor-pointer transition-transform duration-300 bg-white"
             >
               <ImageWithSkeleton src={src} alt={title} className="w-full h-56 object-contain bg-white rounded-t-xl" />
               <div className="absolute bottom-0 w-full bg-black/60 px-4 py-2">
@@ -212,7 +212,7 @@ const HomePage = () => {
 
       {/* FAQ Section */}
       <div className="max-w-3xl mx-auto px-4 mt-24">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center  mb-8">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">
           Frequently asked <span className="text-orange-500">questions</span>
         </h2>
         <div className="space-y-2">
@@ -223,10 +223,10 @@ const HomePage = () => {
               onClick={() => setOpenIndex(prev => (prev === index ? null : index))}
             >
               <div className="flex justify-between items-center">
-                <h3 className="text-base sm:text-lg font-medium ">{faq.question}</h3>
+                <h3 className="text-base sm:text-lg font-medium">{faq.question}</h3>
                 <span className="text-xl font-bold">{openIndex === index ? "−" : "+"}</span>
               </div>
-              {openIndex === index && <p className=" mt-2 text-gray-400 text-sm">{faq.answer}</p>}
+              {openIndex === index && <p className="mt-2 text-gray-400 text-sm">{faq.answer}</p>}
             </div>
           ))}
         </div>
