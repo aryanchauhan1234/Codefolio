@@ -69,7 +69,7 @@ const Navbar = () => {
                   <motion.span
                     key={i}
                     variants={letterVariants}
-                    className={i >= 4 ? "text-orange-500" : ""}
+                    className={i >= 3 ? "text-orange-500" : ""}
                   >
                     {char}
                   </motion.span>
