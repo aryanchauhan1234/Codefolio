@@ -6,7 +6,7 @@ import { LogOut } from "lucide-react";
 import useThemeStore from "../store/useThemeStore";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
-import logoAnimation from "../animations/logo.json";
+import logoAnimation from "../styles/logo.json";
 
 const logoText = "Codfolio".split("");
 
