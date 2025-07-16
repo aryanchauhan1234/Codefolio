@@ -4,7 +4,7 @@ import BinarySearchVisualizer from "../components/binary_search_vis";
 import DFSVisualizer from "../components/Dfsvisualizer";
 import QuickSortVisualizer from "../components/QuickSortVisualizer";
 import DijkstraVisualizer from "../components/DijkstraVisualizer.jsx";
-import QueueVisualizer from "../components/ QueueVisualizer.jsx";
+import QueueVisualizer from "../components/QueueVisualizer.jsx";
 import StackVisualizer from "../components/StackVisualizer.jsx";
 import Default from "../components/default.jsx";
 
@@ -25,7 +25,7 @@ const DsaVisualizer = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 max-w-7xl mx-auto px-4 py-12 gap-6 pt-[6%] dark:bg-gray-900 dark:text-white transition-colors duration-500">
+    <div className="grid grid-cols-1 md:grid-cols-4 max-w-7xl mx-auto px-4 py-12 gap-6 pt-[6%] bg-white text-black transition-colors duration-500">
       {/* Sidebar */}
       <div className="col-span-1">
         <h2 className="text-2xl font-bold mb-4 text-orange-500">Algorithms</h2>
