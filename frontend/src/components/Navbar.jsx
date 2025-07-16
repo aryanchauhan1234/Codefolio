@@ -1,9 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuthStore } from "../store/useAuthStore";
 import LogoutConfirmationModal from "../components/LogoutConfirmationModal";
 import { LogOut } from "lucide-react";
-import useThemeStore from "../store/useThemeStore";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import logoAnimation from "../styles/logo.json";
@@ -32,7 +31,6 @@ const letterVariants = {
 };
 
 const Navbar = () => {
-  const { isDark, toggleTheme } = useThemeStore();
   const { logout, authUser } = useAuthStore();
   const [showLogoutModal, setShowLogoutModal] = useState(false);
 
@@ -45,7 +43,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed top-0 z-50 w-full backdrop-blur-md shadow-md dark:bg-gray-900 dark:text-white transition-colors duration-500">
+      <div className="fixed top-0 z-50 w-full backdrop-blur-md shadow-md bg-white text-black transition-colors duration-500">
         <div className="w-full px-3 py-1 relative">
           <div className="flex items-center justify-between">
             {/* Logo with Lottie */}
@@ -81,19 +79,19 @@ const Navbar = () => {
             <div className="flex items-center gap-5 text-base font-semibold">
               <Link
                 to="/"
-                className="px-2.5 py-1 hover:bg-black/10 dark:hover:bg-white/10 rounded"
+                className="px-2.5 py-1 hover:bg-black/10 rounded"
               >
                 Leaderboard
               </Link>
               <Link
                 to="/dsa-visualizer"
-                className="px-2.5 py-1 hover:bg-black/10 dark:hover:bg-white/10 rounded"
+                className="px-2.5 py-1 hover:bg-black/10 rounded"
               >
                 Algorithms
               </Link>
               <Link
                 to="/QuestionTracker"
-                className="px-2.5 py-1 hover:bg-black/10 dark:hover:bg-white/10 rounded"
+                className="px-2.5 py-1 hover:bg-black/10 rounded"
               >
                 Question Tracker
               </Link>
@@ -104,22 +102,22 @@ const Navbar = () => {
                   Profile Tracker
                 </div>
                 <div className="absolute top-full left-0 w-full h-4 group-hover:block hidden" />
-                <div className="absolute top-full left-0 mt-1 w-48 bg-white shadow-lg rounded-lg hidden group-hover:flex flex-col z-50 dark:bg-gray-900 dark:text-white">
+                <div className="absolute top-full left-0 mt-1 w-48 bg-white shadow-lg rounded-lg hidden group-hover:flex flex-col z-50 text-black">
                   <Link
                     to="/CodeForces"
-                    className="px-4 py-2 text-base hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className="px-4 py-2 text-base hover:bg-gray-100"
                   >
                     Codeforces
                   </Link>
                   <Link
                     to="/portfolio"
-                    className="px-4 py-2 text-base hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className="px-4 py-2 text-base hover:bg-gray-100"
                   >
                     Coding <span className="text-orange-500">Portfolio</span>
                   </Link>
                   <Link
                     to="/events"
-                    className="px-4 py-2 text-base hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className="px-4 py-2 text-base hover:bg-gray-100"
                   >
                     Event Tracker
                   </Link>
@@ -132,28 +130,28 @@ const Navbar = () => {
                   Friends
                 </div>
                 <div className="absolute top-full w-full h-4 group-hover:block hidden" />
-                <div className="absolute top-full right-0 mt-1 w-48 bg-white shadow-lg rounded-lg hidden group-hover:flex flex-col z-50 dark:bg-gray-900 dark:text-white">
+                <div className="absolute top-full right-0 mt-1 w-48 bg-white shadow-lg rounded-lg hidden group-hover:flex flex-col z-50 text-black">
                   <Link
                     to="/Freindcomparison"
-                    className="px-4 py-2 text-base hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className="px-4 py-2 text-base hover:bg-gray-100"
                   >
                     Comparison
                   </Link>
                   <Link
                     to="/battle/:roomId"
-                    className="px-4 py-2 text-base hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className="px-4 py-2 text-base hover:bg-gray-100"
                   >
                     Coding <span className="text-orange-500">Battle</span>
                   </Link>
                   <Link
                     to="/create"
-                    className="px-4 py-2 text-base hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className="px-4 py-2 text-base hover:bg-gray-100"
                   >
                     Create Room
                   </Link>
                   <Link
                     to="/join"
-                    className="px-4 py-2 text-base hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className="px-4 py-2 text-base hover:bg-gray-100"
                   >
                     Join Room
                   </Link>
@@ -164,7 +162,7 @@ const Navbar = () => {
               {authUser && (
                 <button
                   onClick={handleLogoutClick}
-                  className="flex items-center gap-2 py-1.5 text-red-500 hover:bg-orange-100 dark:hover:bg-orange-200 rounded transition"
+                  className="flex items-center gap-2 py-1.5 text-red-500 hover:bg-orange-100 rounded transition"
                 >
                   <LogOut size={18} />
                 </button>
